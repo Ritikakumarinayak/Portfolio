@@ -1,0 +1,74 @@
+.hero{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:35px;
+}
+.hero img{
+    margin-top: 100px;
+    border-radius: 50px;
+    height:50vh;
+    animation-delay: 0.5s;
+
+
+}
+.hero h1{
+    text-align: center;
+    width: 70%;
+    font-size: 90px;
+    font-weight: 600;
+    animation-delay: 1s;
+}
+
+.hero h1 span{
+    background: linear-gradient(270deg,#DF8908 10%,#B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero p{
+    width:50%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+}
+.hero-action{
+    display: flex;
+    align-items: center;
+    gap:25px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    animation-delay: 5s;
+}
+.hero-connect{
+    padding: 25px 45px;
+    border-radius:50px;
+    background: linear-gradient(264deg,#DF8908 -5.09%,#B415FF 106.28%);
+    cursor: pointer;
+}
+.hero-resume{
+    padding: 25px 45px;
+    border-radius:50px;
+    border:2px solid white;
+    cursor: pointer;
+    color: azure;
+    text-decoration: none;
+}
+.hero-connect:hover{
+    border:2px solid white;
+}
+.hero-resume:hover{
+    border:2px solid purple;
+}
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,169 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:80px;
+    margin:50px 170px;
+
+}
+.about-title{
+    position:relative;
+
+}
+.about-title h1{
+    padding: 0 30px;
+    font-size: 80px;
+    font-weight: 600;
+    
+}
+.about-title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.about-section{
+    display: flex;
+    gap:80px;
+
+}
+.about-right{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.about-para{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.about-skills{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+
+}
+.about-skill{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    transition: 0.3s;
+}
+.about-skill p{
+    min-width: 150px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.about-skill hr{
+    outline: none;
+    border:none;
+    width:50%;
+    height:8px;
+    border-radius:50px;
+    background: linear-gradient(264deg,#DF8908 -5.09%,#B415FF 106.28%);
+}
+.about-achievements{
+    display: flex;
+  
+    width:100%;
+    justify-content: space-around;
+    margin-bottom:80px;
+}
+.about-achievement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: 0.5s;
+}
+.about-achievement h1{
+    font-size: 60px;
+    font-weight: 700;
+    background:linear-gradient(270deg,#DF8908 50.41%,#B415FF90.25%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.about-achievement p{
+    font-size: 22px;
+    font-weight: 500;
+
+
+}
+.about-skill:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+
+}
+.about-achievement:hover{
+    transform: scale(1.12);
+    transition: 0.5s;
+}
+.about-left img{
+    width: 30vw;
+    height: 80vh;
+    border-radius: 20px;
+    border-bottom: #B415FF;
+}
+.anime {
+    opacity: 0;
+    transform: translateX(-80px);
+    animation: moveupi 0.1s linear forwards;
+    animation-timeline: view();
+ 
+}
+
+@keyframes moveupi {
+    0% {
+        opacity: 0.5;
+        transform: translateX(-80px);
+    }
+    50% {
+        opacity: 1;
+      
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+       
+    }
+}
+
+.ani {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: move 0.1s linear forwards;
+    animation-timeline: view();
+    animation-range-start: 0px;
+    animation-range-end: contain;
+ 
+}
+
+@keyframes move {
+    0% {
+        opacity: 0.5;
+        transform: translateX(50px);
+    }
+    50% {
+        opacity: 1;
+      
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+       
+    }
+}
+.about-title{
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: 0px;
+    animation-range-end: contain;
+}
+@keyframes fade-in{
+    from{scale:0.5; opacity:0;}
+    to {scale:1;opacity:1;}
+}

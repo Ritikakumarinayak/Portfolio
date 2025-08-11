@@ -1,0 +1,187 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+
+}
+.contact-title{
+    position: relative;
+}
+.contact-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+
+}
+.contact-title img{
+    position: absolute;
+    bottom: 0;
+right: 0;
+z-index: -1;
+
+}
+.contact-section{
+    display: flex;
+    gap: 150px;
+}
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contact-left h1{
+    font-size: 80px;
+    font-weight: 700;
+    background: linear-gradient(270deg,#DF8908 80%,#B415FF 100%);
+     background-clip:text; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+.contact-left p{
+    max-width: 550px;
+    color: #D8D8D8;
+    font-size: 20px;
+    line-height: 25px;
+}
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #D8D8D8;
+    font-size: 22px;
+}
+.contact-detail{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.contact-right{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+.contact-right label{
+    color:#D8D8D8;
+    font-size: 22px;
+    font-weight: 500;
+}
+.contact-right input{
+    border:none;
+    width: 700px;
+    height: 78px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: Outfit;
+    font-size: 20px;
+}
+.contact-right textarea{
+    border:none;
+    width: 650px;
+    padding: 25px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: Outfit;
+    font-size: 20px;
+}
+.contact-submit{
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background:linear-gradient(264deg,#DF8908 -5.09%,#B415FF 106.28%);
+    font-size: 22px;
+    padding: 20px 60px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact-submit:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.contact-title{
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: 0px;
+    animation-range-end: contain;
+}
+@keyframes fade-in{
+    from{scale:0.5; opacity:0;}
+    to {scale:1;opacity:1;}
+}
+
+/* Define typewriter animation */
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Apply typewriter animation to the text */
+  .contact-left h1 {
+    overflow: hidden; /* Hide overflow text */
+    border-right: 2px solid orange; /* Cursor effect */
+    white-space: nowrap; /* Keep text in one line */
+    margin: 0 auto; /* Center align */
+    animation: typing 5s steps(30) infinite forwards; /* 5s duration, 20 steps */
+  }
+
+  .contact-left{
+    opacity: 0;
+    transform: translateX(-80px);
+    animation: moveupii 0.1s linear forwards;
+    animation-timeline: view();
+ 
+}
+
+@keyframes moveupii {
+    0% {
+        opacity: 0.5;
+        transform: translateX(-100px);
+    }
+    50% {
+        opacity: 1;
+      
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+       
+    }
+}
+
+.contact-right{
+    opacity: 0;
+    transform: translateX(100px);
+    animation: movei 0.1s linear forwards;
+    animation-timeline: view();
+    animation-range-start: 0px;
+    animation-range-end: contain;
+ 
+}
+
+@keyframes movei {
+    0% {
+        opacity: 0.5;
+        transform: translateX(100px);
+    }
+    50% {
+        opacity: 1;
+      
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+       
+    }
+}
+  
